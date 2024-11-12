@@ -1,11 +1,28 @@
 ﻿// Exam1.cpp : 此檔案包含 'main' 函式。程式會於該處開始執行及結束執行。
 //
+using namespace std;
 
 #include <iostream>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int mouth = 1;
+    string result = "";
+    cout << "請輸入月份(1~12):";
+    cin >> mouth;
+
+    if (mouth < 1 || mouth>12) {
+        cout << "請輸入有效月份" << endl;
+    }
+    else
+    {
+        if (mouth >= 3 && mouth <= 5) result = "春季";
+        else if (mouth >= 6 && mouth <= 8) result = "夏季";
+        else if (mouth >= 9 && mouth <= 11) result = "秋季";
+        else   result = "冬季";
+        cout << "本月是" << result << endl;
+
+    }
 }
 
 // 執行程式: Ctrl + F5 或 [偵錯] > [啟動但不偵錯] 功能表
